@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href="/public/style.css"> -->
+</head>
+<body class="h-[100vh]">
+
+    <div id="nav" class="w-[100vw]">
+        <header class="flex justify-between text-2xl">
+            <span id="logo" class="font-bold text-2xl">THAT</span>
+            <span id="roomName" class="">Rakesh Room</span>
+            <span id="menu"><i class="ri-menu-3-line"></i></span>
+            <div class="menuBar absolute right-0">
+                <span class="mclose absolute text-s top-0 right-4"><i class="ri-menu-unfold-3-line"></i></span>
+                <h1 class="my-3">Leave Room</h1>
+                <h1>Change Room</h1>
+            </div>
+        </header>
+    </div>
+    
+    <div class="max-h-[100vh]">
+        <div class="content max-h-[89vh] overflow-y-auto relative">
+            <div class="send ">Sender</div>
+            <div class="reciver">Reciever</div>
+        </div>
+        
+        <!-- controls.... -->
+        <div class="h-[5%] w-full bottom-1 flex content-center bg-slate-500 fixed">
+            <input type="text" class="w-full border-2 border-black text-xl" placeholder="Type message" onkeypress="enter(event)">
+            <button class="px-7 border-2" onclick="addSender()">Send</button>
+        </div>
+    </div>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/home.js"></script>
+</body>
+</html>
